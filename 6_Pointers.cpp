@@ -1,10 +1,12 @@
 #include <iostream>
+
 using namespace std;
 
 // --- Function Declarations ---
 void increment(int *ptr);     // function using pointer
 void printArray(int *arr, int size); // function with pointer to array
 
+// ******************************************************* Main ********************************************************
 int main() {
     cout << "=== Pointer Demonstration ===\n" << endl;
 
@@ -29,7 +31,7 @@ int main() {
     int arr[5] = {1, 2, 3, 4, 5};
     cout << "\nArray values using pointer arithmetic:" << endl;
     for (int i = 0; i < 5; i++) {
-        cout << *(arr + i) << " "; // arr decays into pointer
+        cout << *(arr + i) << " "; // Int array arr decays into pointer
     }
     cout << endl;
 

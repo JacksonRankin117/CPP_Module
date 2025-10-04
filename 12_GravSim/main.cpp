@@ -7,19 +7,23 @@
 
 using namespace std;
 
-const double dt = 0.01; // Time step for simulation
+// Global Variable
+const double dt = 0.01; // Time step for simulation (Not capitalized because of mathematical convention. DT is weird)
 
 Vec3 calc_gravity(const Body& b1, const Body& b2);
 vector<Body> rk4_sim(const int bodies, const double max_time, const double dt);
 void file_output(const vector<Body>& body_list, const string& filename);
 
+// *************************************************** Main program ****************************************************
 int main() {
     vector<Body> body_list = rk4_sim(50, 10.0, dt);
     file_output(body_list, "output.csv");
     return 0;
 }
 
+//  ********************************************** Function Definitions ************************************************
 
+// Calculates the gravitational force (gravity is like 1.5*10^11 times as strong in this sim)
 Vec3 calc_gravity(const Body& b1, const Body& b2) {
     const double G = 1.0;  // Gravitational constant, adjust as needed. the real value is 6.67430e-11, but thats too little.
     Vec3 r = b2.positions.back() - b1.positions.back();
@@ -31,6 +35,8 @@ Vec3 calc_gravity(const Body& b1, const Body& b2) {
     return force;
 }
 
+// This is the function that does Runge-Kutta Order 4 for every object. This is O(n^2), unfortunately.
+// Better grav sims are O(nlog(n)), but they are very complicated
 vector<Body> rk4_sim(const int bodies, const double max_time, const double dt) {
     double current_time = 0.0;
 
@@ -40,6 +46,7 @@ vector<Body> rk4_sim(const int bodies, const double max_time, const double dt) {
         body_list.push_back(body);
     }
 
+    // ********************************** RK4 loop for differential equation solution **********************************
     while (current_time < max_time) {
         vector<Body> temp_bodies = body_list;
 
@@ -90,17 +97,19 @@ vector<Body> rk4_sim(const int bodies, const double max_time, const double dt) {
             Vec3 next_position = pos0 + (dt / 6.0) * (k1_r + 2.0 * k2_r + 2.0 * k3_r + k4_r);
 
             Vec3 net_force = get_acceleration(pos0, body_list, i) * body_list[i].mass;
-
-            body_list[i].accelerations.push_back(k1_v); // Optional, storing the first acceleration used
+            
+            // Storing forces, accelerations, velocities, and positions
+            body_list[i].forces.push_back(net_force);
+            body_list[i].accelerations.push_back(k1_v);
             body_list[i].velocities.push_back(next_velocity);
             body_list[i].positions.push_back(next_position);
-            body_list[i].forces.push_back(net_force);
         }
         current_time += dt;
     }
     return body_list;
 }
 
+// Writes the data to a file
 void file_output(const vector<Body>& body_list, const string& filename) {
     ofstream out(filename);
 

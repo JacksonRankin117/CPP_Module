@@ -1,11 +1,13 @@
 #include <iostream>
 #include <vector>
+
 using namespace std;
 
 // --- Function declarations ---
 void printArray(int arr[], int size);
 void printVector(const vector<int> &vec);
 
+// ******************************************************* Main ********************************************************
 int main() {
     cout << "=== Arrays, Vectors, and Memory Demonstration ===\n" << endl;
 

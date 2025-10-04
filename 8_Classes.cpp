@@ -2,13 +2,13 @@
 #include <string>
 using namespace std;
 
-// --- Class definition ---
+// ************************************************* Class definition **************************************************
 class Person {
-private:
+  private:
     string name;
     int age;
 
-public:
+  public:
     // Constructor
     Person(string n, int a) {
         name = n;
@@ -31,6 +31,7 @@ public:
     }
 };
 
+// ******************************************************* Main ********************************************************
 int main() {
     cout << "=== Class Introduction Demonstration ===\n" << endl;
 

@@ -1,10 +1,15 @@
+"""
+This isn't C++, I know, but this was the best way to visualize the data I could find. Julia also handles animations 
+better than Pythin does
+"""
+
 using CSV, DataFrames, GLMakie
 using GeometryBasics: Point3f
 
 # Load data
 df = CSV.read("11_GravSim/output.csv", DataFrame)
 
-N = 2000
+N = 50
 nframes = nrow(df)
 
 # Parse positions into array of matrices: frames × (N × 3)

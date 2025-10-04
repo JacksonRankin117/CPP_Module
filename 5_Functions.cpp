@@ -1,14 +1,17 @@
 #include <iostream>
 #include <string>
+
 using namespace std;
 
-// --- Function Declarations (Prototypes) ---
+// *********************************************** Function Declarations ***********************************************
 int add(int a, int b);                    // Returns the sum
 double add(double a, double b);           // overloaded version
 void greet(string name);                  // prints greeting
 void swapValues(int &x, int &y);          // pass by reference
 int factorial(int n);                     // recursive function
 
+
+// ******************************************************* Main ********************************************************
 int main() {
     cout << "=== Function Demonstration ===\n" << endl;
 
@@ -36,8 +39,7 @@ int main() {
     return 0;
 }
 
-// --- Function Definitions ---
-
+// ************************************************ Function Definitions ***********************************************
 // Simple function with return
 int add(int a, int b) {
     return a + b;

@@ -2,13 +2,13 @@
 #include <string>
 using namespace std;
 
-// --- Simple struct ---
+// Simple struct
 struct Point {
     double x;
     double y;
 };
 
-// --- Struct with functions ---
+// Struct with functions
 struct Rectangle {
     double width;
     double height;
@@ -22,7 +22,7 @@ struct Rectangle {
     }
 };
 
-// --- Class for comparison ---
+// Class for comparison
 class Circle {
 private:
     double radius;
@@ -39,6 +39,7 @@ public:
     }
 };
 
+// ******************************************************* Main ********************************************************
 int main() {
     cout << "=== Structs and Classes Demonstration ===\n" << endl;
 

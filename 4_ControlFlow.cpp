@@ -1,11 +1,13 @@
 #include <iostream>
 #include <string>
+
 using namespace std;
 
+// ******************************************************* Main ********************************************************
 int main() {
     cout << "=== Control Flow Demonstration ===" << endl;
 
-    // --- IF / ELSE IF / ELSE ---
+    // IF / ELSE IF / ELSE
     int number;
     cout << "Enter an integer: ";
     cin >> number;
@@ -18,7 +20,7 @@ int main() {
         cout << "You entered zero." << endl;
     }
 
-    // --- SWITCH STATEMENT ---
+    // SWITCH STATEMENT
     char grade;
     cout << "\nEnter your grade (A, B, C, D, F): ";
     cin >> grade;
@@ -44,7 +46,7 @@ int main() {
             break;
     }
 
-    // --- FOR LOOP with CONTINUE ---
+    // FOR LOOP with CONTINUE
     cout << "\nEven numbers from 1 to 10:" << endl;
     for (int i = 1; i <= 10; i++) {
         if (i % 2 != 0) continue; // skip odd numbers
@@ -52,7 +54,7 @@ int main() {
     }
     cout << endl;
 
-    // --- WHILE LOOP with BREAK ---
+    // WHILE LOOP with BREAK
     int count = 0;
     cout << "\nCounting until 5 using while loop:" << endl;
     while (true) {
@@ -62,7 +64,7 @@ int main() {
     }
     cout << endl;
 
-    // --- DO-WHILE LOOP ---
+    // DO-WHILE LOOP
     string answer;
     do {
         cout << "\nDo you want to continue? (yes/no): ";

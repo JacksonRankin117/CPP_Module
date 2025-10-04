@@ -2,10 +2,12 @@
 
 using namespace std;
 
-// Initilize function do demonstrate void datatype
-void example() {}
+// Initilize function to demonstrate void datatype
+void example();
 
+// ******************************************************* Main ********************************************************
 int main() {
+
     /*************************************************  Integer types *************************************************/
     int a;        // Standard integer, 4 bytes
     short b;      // Shorter integer, 2 bytes
@@ -43,10 +45,15 @@ int main() {
 
     return 0;
 
+    // Another important thing: the const keyword will make it impossible for the value of the datatype to be changed.
+    // As an example, you might want to do this with physical constants, like G or PI. C++ convention with constants
+    // is to capitalize each constant datatype. As an example:
+    const double PI = 3.141592653589792328;
+
 }
 
-/*****************************************************  Void type *****************************************************/
+/************************************************  Void type continued ************************************************/
 void example() {
-        // Example code (can't return a value)
-        cout << "This is a function that doesn't return a value";
-    }
+    // Example code (can't return a value)
+    cout << "This is a function that doesn't return a value";
+}

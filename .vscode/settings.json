@@ -3,6 +3,7 @@
         120
     ],
     "files.associations": {
-        "istream": "cpp"
+        "istream": "cpp",
+        "typeinfo": "cpp"
     }
 }
