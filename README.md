@@ -1,0 +1,1 @@
+/Users/jackson.rankin/.julia/juliaup/julia-1.11.7+0.aarch64.apple.darwin14/bin/julia
