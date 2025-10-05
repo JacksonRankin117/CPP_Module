@@ -1,6 +1,6 @@
 #include <iostream> // must include the iostream header for input/output to/from the console
 
-// Not the best practive with large files, but shortens std::cout so I don't have to type std:: every time I want to use something in the standard namespace
+// Not the best practice with large files, but shortens std::cout so I don't have to type std:: every time I want to use something in the standard namespace
 using namespace std;
 
 // ******************************************************* Main ********************************************************

@@ -1,6 +1,6 @@
 """
 This isn't C++, I know, but this was the best way to visualize the data I could find. Julia also handles animations 
-better than Pythin does
+better than Python does
 """
 
 using CSV, DataFrames, GLMakie

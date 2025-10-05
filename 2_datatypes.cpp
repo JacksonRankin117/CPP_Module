@@ -38,17 +38,16 @@ int main() {
     /*************************************************  Boolean type **************************************************/
     bool l;  // Can hold a 1 or a 0 (1 is True, and 0 is False)
 
-
     /***************************************************  Void type ***************************************************/
     // Call the void function
     example();
-
-    return 0;
 
     // Another important thing: the const keyword will make it impossible for the value of the datatype to be changed.
     // As an example, you might want to do this with physical constants, like G or PI. C++ convention with constants
     // is to capitalize each constant datatype. As an example:
     const double PI = 3.141592653589792328;
+
+    return 0;
 
 }
 

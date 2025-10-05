@@ -52,7 +52,7 @@ This file uses a struct called student, and will output every student's informat
 
 For this simulation, I made gravity about 15 billion times stronger, and used a numerical method called Runge-Kutta order 4 for solving ordinary differential equations. This file also outputs all the position data to a csv, and then a separate Julia file rreads that file and turns it into an animation.
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/i4R2MWbeYII)
 
 # Development Environment
 
